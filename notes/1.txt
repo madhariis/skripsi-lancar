@@ -1,0 +1,30 @@
+1. User Role: Cust, Cash. Kitchen, Waiter, Manager
+2. Cust: Dateng -> duduk -> keluarin gadget -> scan qr code -> pilih menu -> confirm order ->
+         see status order -> update order -> request bill -> payment
+3. Kitchen: see order list from customer per table -> approve order -> give status order
+4. Waiter: see order status from kitchen -> bring the food to table ->
+5. Cashier: see order bill -> check order -> proceed payment -> print payment receipt
+6. Manager: see laporan keuangan
+
+
+user:
+transaction: id, quantity,
+
+tahapan ketika menu dipesan, masuk ke kitchen, order received to kitchen, kitchen confirm order, update order status to "in progress"
+ketika makanan selesai dimasak, taro di window, update status per menu yg selesai dimasak, lalu update status from "in progress" to "done" when waiter mulai antar ke meja.
+ketika akan bayar, request bill, check bill, choose payment type, calculate
+
+Stack:
+Lang: NodeJS
+DB: Mysql
+ORM: typeORM
+Framework: KoaJS
+Container Engine: Docker
+WebSocket: Socket.io // Belom di implementasi
+FrontEnd: VueJS
+Server: Ubuntu
+
+API Docs:
+https://documenter.getpostman.com/view/3005111/RWEmGvda
+
+

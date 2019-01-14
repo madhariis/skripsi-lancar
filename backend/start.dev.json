@@ -1,0 +1,11 @@
+{
+   "apps": [
+       {
+        "name": "node",
+        "cwd": "/app",
+        "args": "start",
+        "script": "npm",
+        "watch": true
+      }
+   ]
+ }

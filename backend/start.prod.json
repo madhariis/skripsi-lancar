@@ -1,0 +1,10 @@
+{
+  "apps": [
+      {
+       "name": "node",
+       "cwd": "/app",
+       "args": ["run", "production"],
+       "script": "npm"
+     }
+  ]
+}

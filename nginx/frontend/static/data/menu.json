@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Pizza",
+    "menus": [
+      {
+        "name": "Pizza 1",
+        "price": 50000,
+        "img": "http://via.placeholder.com/50x50",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      {
+        "name": "Pizza 2",
+        "price": 100000,
+        "img": "http://via.placeholder.com/50x50",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      {
+        "name": "Pizza 3",
+        "price": 150000,
+        "img": "http://via.placeholder.com/50x50",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      }
+    ]
+  },
+  {
+    "title": "Spaghetti",
+    "menus": [
+      {
+        "name": "Spaghetti 1",
+        "price": 50000,
+        "img": "http://via.placeholder.com/50x50",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      {
+        "name": "Spaghetti 2",
+        "price": 100000,
+        "img": "http://via.placeholder.com/50x50",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      {
+        "name": "Spaghetti 3",
+        "price": 150000,
+        "img": "http://via.placeholder.com/50x50",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      }
+    ]
+  },
+  {
+    "title": "Chicken",
+    "menus": [
+      {
+        "name": "Chicken 1",
+        "price": 50000,
+        "img": "http://via.placeholder.com/50x50",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      {
+        "name": "Chicken 2",
+        "price": 100000,
+        "img": "http://via.placeholder.com/50x50",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      },
+      {
+        "name": "Chicken 3",
+        "price": 150000,
+        "img": "http://via.placeholder.com/50x50",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+      }
+    ]
+  }
+]

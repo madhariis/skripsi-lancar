@@ -1,0 +1,51 @@
+{
+  "name": "skripsi-backend",
+  "version": "1.0.0",
+  "description": "project skripsi",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development ts-node src/main/index.js",
+    "production": "cross-env NODE_ENV=production ts-node src/main/index.js"
+  },
+  "author": "madhariis46@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "bluebird": "^3.5.1",
+    "cross-env": "^5.1.4",
+    "es6-error": "^4.0.2",
+    "joi": "^13.3.0",
+    "join-monster": "^2.0.16",
+    "jsonwebtoken": "^8.2.1",
+    "koa": "^2.5.0",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.4.0",
+    "koa-validate": "^1.0.7",
+    "luxon": "^1.0.0",
+    "mysql2": "^1.5.3",
+    "pm2": "^2.10.4",
+    "reflect-metadata": "^0.1.12",
+    "socket.io": "^2.1.0",
+    "typeorm": "^0.1.20",
+    "uuid": "^3.2.1",
+    "qrcode": "^1.2.0",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^9.6.2",
+    "socket.io-client": "^2.1.0",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhariis46/lancar-graphql.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "bugs": {
+    "url": "https://github.com/madhariis46/lancar-graphql/issues"
+  },
+  "homepage": "https://github.com/madhariis46/lancar-graphql#readme"
+}

@@ -1,0 +1,83 @@
+version: "3"
+volumes:
+  nginx-log:
+  static:
+  mysql:
+    driver: ${VOLUMES_DRIVER}
+  phpmyadmin:
+    driver: ${VOLUMES_DRIVER}
+  node_modules_backend:
+    driver: ${VOLUMES_DRIVER}
+networks:
+  backend_net:
+    driver: ${NETWORKS_DRIVER}
+
+services:
+  nginx_proxy:
+      build: ./nginx
+      image: nginx
+      ports:
+          - "80:80"
+          - "443:443"
+      depends_on:
+          - backend
+      links:
+          - backend
+      networks:
+          - backend_net
+      volumes:
+          - static:/static
+          - nginx-log:/var/log/nginx
+  mysql:
+      build:
+        context: ./mysql
+        args:
+          - MYSQL_VERSION=${MYSQL_VERSION}
+      environment:
+        - MYSQL_DATABASE=${MYSQL_DATABASE}
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+        - TZ=Asia/Jakarta
+      volumes:
+        - ${DATA_PATH_HOST}/mysql:/var/lib/mysql
+        - ${MYSQL_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
+      ports:
+        - "${MYSQL_PORT}:3306"
+      networks:
+        - backend_net
+
+  backend:
+      build: ./backend
+      image: skripsi-backend
+      command: bash -c "pm2 start start.prod.json && pm2 logs"
+      ports:
+        - "${BACKEND_PORT}:3000"
+      volumes:
+        - ./backend/app:/app
+        - node_modules_backend:/app/node_modules
+      depends_on:
+        - mysql
+      links:
+        - mysql
+      networks:
+        - backend_net
+      environment:
+        - PATH=/app/node_modules/pm2/bin/:${PATH}
+        - JWT_SECRET_KEY=${JWT_SECRET}
+      stdin_open: true
+      tty: true
+
+  phpmyadmin:
+      build: ./phpmyadmin
+      environment:
+        - PMA_ARBITRARY=1
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      ports:
+        - "8080:80"
+      depends_on:
+        - "mysql"
+      networks:
+        - backend_net
